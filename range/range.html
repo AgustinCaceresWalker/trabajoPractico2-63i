@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Agustin Cacere5">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Ejercicio N° 2</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">NicolasACaceres</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link active" aria-current="page" href="#">¡INICIO!</a>
+                  <a class="nav-link" aria-disabled="true">¡Adivina el numero!</a>
+                  <a class="nav-link disabled" href="#">¡Adivina tu rango!</a>
+                  <a class="nav-link" href="#">¡Organiza tus tareas!</a>
+                  <a class="nav-link" href="#">¿Que hora es?</a>
+                  <a class="nav-link" href="#">¡Cronometro!</a>
+                </div>
+              </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+<h1 class="text-center mt-5">¿Quieres saber cual es TU rango de edad?</h1>
+<h5 class="text-center ">acá te enseñamos como</h5>
+<section class="container">
+    <article class="row">
+        <div class="col-4 text-center mb-5" >
+            <label for="edad">Aqui poné tu edad  <input class="rounded" type="text" id="edad"></label>
+            <div class="alert alert-success mt-2 d-none" role="alert" id="modal-alertGoodMinor">
+                ¡Eres menor de edad!
+              </div>
+              <div class="alert alert-success mt-2 d-none" role="alert" id="modal-alertGoodMajor">
+                ¡Eres mayor de edad!
+              </div>
+              <div class="alert alert-danger mt-2 d-none" role="alert" id="modal-alertDeniedError">
+                ¡Solo numeros!
+              </div>
+              <div class="alert alert-danger mt-2 d-none" role="alert" id="modal-alertDeniedYear">
+                ¿No eres mayor de 100, o si?
+                <a href="https://www.elliberal.com.ar/secciones/256/funebres">Haz click Aqui</a>
+              </div>
+        </div>
+        <div class="col-4 text-center" >
+            <label for="dni">Aqui poné tu DNI  <input class="rounded" type="text" id="dni"></label>
+            <div class="alert alert-danger mt-2 d-none" role="alert" id="modal-alertDenied-Dni">
+                Prueba sin puntos ni comas. Solo numeros.
+              </div>
+              <div class="alert alert-danger mt-2 d-none" role="alert" id="modal-alertDenied-Dni2">
+                Deben ser 8 digitos. 
+                Ej: XX.XXX.XXX
+              </div>
+              <div class="alert alert-success mt-2 d-none" role="alert" id="modal-alertGoodDNI">
+                ¡Excelente!
+              </div>
+        </div>
+        <div class="col-4 text-center" >
+            <label for="edad">Sexo (Colocar H o M)<input class="rounded" type="text" id="sexo"></label>
+            <div class="alert alert-danger mt-2 d-none" role="alert" id="modal-alertDeniedSex">
+                ¡Solo H o M! (Lo siento)
+              </div>
+        </div>
+        <!-- Fila 2da -->
+        <div class="col-4 text-center" >
+            <label for="edad">Aqui poné tu peso (kg)<input class="rounded" type="text" id="peso"></label>
+            <div class="alert alert-success mt-2 d-none" role="alert" id="modal-alertGoodWeight">
+                ¡Excelente!
+              </div>
+              <div class="alert alert-danger mt-2 d-none" role="alert" id="modal-alertErrorWeight">
+                ¡Solo numeros! Asumimos que es en KG
+              </div>
+        </div>
+        <div class="col-4 text-center" >
+            <label for="edad">Aqui poné tu altura (cm)<input class="rounded"type="text" id="altura"></label>
+            <div class="alert alert-success mt-2 d-none" role="alert" id="modal-alertGoodSize">
+                ¡Excelente!
+              </div>
+              <div class="alert alert-danger mt-2 d-none" role="alert" id="modal-alertErrorSize">
+                ¡Solo numeros! Sin puntos ni comas
+              </div>
+        </div>
+        <div class="col-4 text-center mb-5" >
+            <label for="edad">Año de Nacimiento<input class="rounded" type="text" id="año"></label>
+            <div class="alert alert-success mt-2 d-none" role="alert" id="modal-alertGoodBirth">
+                ¡Excelente!
+              </div>
+              <div class="alert alert-dangermt-2 d-none" role="alert" id="modal-alertErrorBirth">
+                ¡Solo Numeros! Sin puntos ni comas
+              </div>
+        </div>
+        <div class=" col-12 text-center" >
+            <label for="name">Aqui poné tu nombre:  <input class="rounded" type="text" id="nombre"></label>
+            <div class="alert alert-success mt-2 d-none" role="alert" id="modal-alertGoodName">
+                ¡Excelente!
+              </div>
+        </div>
+    </article>
+    <article class="container">
+<div class="text-center mt-5"><button type="button" class="btnShow btn btn-outline-secondary" id="btnDate">Mostrar Datos</button></div>
+<div class="text-center mt-3"><button type="button" class="btnShow btn btn-primary" id="btnShow">Mostrar Datos</button></div>
+    </article>
+</section>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="./app2.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>

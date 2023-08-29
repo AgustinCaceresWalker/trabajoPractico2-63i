@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Inter:wght@300;500;800&display=swap');
+
+h1{
+    font-family: cinzel;
+}
+
+h5{
+    font-family: inter;
+    font-weight: 100;
+    font-style: oblique;
+}
